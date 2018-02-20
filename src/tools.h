@@ -1,6 +1,7 @@
 #ifndef TOOLS_H_
 #define TOOLS_H_
 #include <vector>
+#include <math.h> 
 #include "Eigen/Dense"
 
 using Eigen::MatrixXd;
@@ -28,6 +29,12 @@ public:
   * A helper method to calculate Jacobians.
   */
   MatrixXd CalculateJacobian(const VectorXd& x_state);
+
+
+
+  VectorXd radar_mapping(const VectorXd& x_state);
+
+  void normalize_angle(VectorXd& y);
 
 };
 
